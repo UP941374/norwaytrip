@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+
+p {
+    text-align: center;
+    font-size: 5eM;
+}
+
+.upper{
+    height: 50vh;
+    border: 1px dotted green;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+
+}
+
+.lower{
+    height: 50vh;
+    border: 1px dotted green;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
