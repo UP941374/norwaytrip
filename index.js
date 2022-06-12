@@ -58,9 +58,17 @@ window.onload = function() {
     fuelStatsCost.textContent = '£' + calcfuelStatsCost();
     fuelStatsMPG.textContent = calcfuelStatsMPG() + ' l/100km';
 
+    //map section
+    let map = L.map('map').setView([51.505, -0.09], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+}).addTo(map);
+
+
     //default landing page
-    news.style.display = 'block';
-    live.style.display = 'none';
+    news.style.display = 'none';
+    live.style.display = 'block';
     stream.style.display = 'none';
     fuel.style.display = 'none';
     track.style.display = 'none';

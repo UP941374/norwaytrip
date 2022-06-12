@@ -99,6 +99,11 @@ body{
     }
   }
 
+  #map { 
+    height: 500px; 
+    }
+
+
   @media only screen and (max-width: 420px) {
     .header {
       font-size: 2eM;
