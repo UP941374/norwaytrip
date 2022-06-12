@@ -11,6 +11,54 @@ window.onload = function() {
     const fuel = document.querySelector('#fuel');
     const track = document.querySelector('#track');
 
+    const fuelStatsKms = document.querySelector('#fuelStatsKms');
+    const fuelStatsLiters = document.querySelector('#fuelStatsLiters');
+    const fuelStatsCost = document.querySelector('#fuelStatsCost');
+    const fuelStatsMPG = document.querySelector('#fuelStatsMPG');
+
+    const fuelings = [];
+
+    const fueling1 = {
+        date: "11/06/2022",
+        stationName: "BP",
+        stationLocation:"Andover, UK",
+        odo:153948,
+        liters: 81.46,
+        cost: 159.96,
+      };
+
+    fuelings.push(fueling1);
+
+    function calcfuelStatsKms() {
+        return 0
+    };
+
+    function calcfuelStatsLiters(){
+        let liters = 0;
+        for (const fueling of fuelings) {
+            liters = liters + fueling.liters
+        }
+        return liters
+    };
+
+    function calcfuelStatsCost(){
+        let cost = 0;
+        for (const fueling of fuelings) {
+            cost = cost + fueling.cost
+        }
+        return cost
+    };
+
+    function calcfuelStatsMPG(){
+        return 0    
+    }
+
+    fuelStatsKms.textContent = calcfuelStatsKms() + ' KMs';
+    fuelStatsLiters.textContent = calcfuelStatsLiters() + ' l';
+    fuelStatsCost.textContent = '£' + calcfuelStatsCost();
+    fuelStatsMPG.textContent = calcfuelStatsMPG() + ' l/100km';
+
+    //default landing page
     news.style.display = 'block';
     live.style.display = 'none';
     stream.style.display = 'none';
@@ -56,6 +104,8 @@ window.onload = function() {
         fuel.style.display = 'none';
         track.style.display = 'block';
     })
+
+
 
 
 }
