@@ -34,8 +34,11 @@ body{
     border-radius: 25px;
 }
 
-.content {
-    height: 75vh;
+.button:hover {
+    cursor: pointer;
+}
+
+.news {
     display: flex;
     flex-direction: column;
 }
@@ -65,4 +68,10 @@ body{
 .newsItemContentText{
     width:75%;
     padding:0.5eM;
+}
+
+.fuel {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
 }
