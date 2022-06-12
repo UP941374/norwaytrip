@@ -67,8 +67,8 @@ window.onload = function() {
 
 
     //default landing page
-    news.style.display = 'none';
-    live.style.display = 'block';
+    news.style.display = 'black';
+    live.style.display = 'none';
     stream.style.display = 'none';
     fuel.style.display = 'none';
     track.style.display = 'none';
