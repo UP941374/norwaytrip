@@ -14,10 +14,12 @@
     crossorigin=""></script>
     <script src="index.js" defer></script>
   </head>
+
   <body>
         <div class="header"> 
             <h2> Norway 2022 </h2>
         </div>
+        
         <div class="menu"> 
             <div class="button" id="newsButton"> NEWS </div>
             <div class="button" id="liveButton"> LIVE </div>
@@ -26,20 +28,36 @@
             <div class="button" id="trackButton"> TRACK </div>            
         </div>
 
-
-
         <div class="news" id="news">
 
+            <!-- NEWS TEMPLATE
+
             <div class="ItemWrapper">
-                <div class="newsItemTime">
+                <div class="newsItemTime">                    
+                    TIME DATE LOCATION
+                </div>
+                <div class="newsItemContentWrapper">
+                    <div class="newsItemContentImage">
+                        <a href="IMG LINK"> <img src="IMG LINK" alt="IMG CAPTION" width="100%" class="image"></a>
+                    </div>
+                    <div class="newsItemContentText">
+                        DESCRIPTION
+                    </div>
+                </div>
+            </div>
+
+             -->
+
+            <div class="ItemWrapper">
+                <div class="newsItemTime">                    
                     19:00 13/06/2022 Brugge
                 </div>
                 <div class="newsItemContentWrapper">
                     <div class="newsItemContentImage">
-                        <img src="img/camping_no1.jpg" alt="Campsite" width="100%" class="image">
+                        <a href="img/camping_no1.jpg"> <img src="img/camping_no1.jpg" alt="Campsite" width="100%" class="image"></a>
                     </div>
                     <div class="newsItemContentText">
-                        First wild camping near a forest. Very quiet and peaceful!
+                        First camping near a forest. Very quiet and peaceful!
                     </div>
                 </div>
             </div>
@@ -50,7 +68,7 @@
                 </div>
                 <div class="newsItemContentWrapper">
                     <div class="newsItemContentImage">
-                        <img src="img/ferry_topdeck.jpg" alt="View from top deck!" width="100%" class="image">
+                        <a href="img/ferry_topdeck.jpg"> <img src="img/ferry_topdeck.jpg" alt="View from top deck!" width="100%" class="image"></a>
                     </div>
                     <div class="newsItemContentText">
                         A view from the top deck of ISLE OF INISHEER!
@@ -64,7 +82,7 @@
                 </div>
                 <div class="newsItemContentWrapper">
                     <div class="newsItemContentImage">
-                        <img src="img/odo_start.jpg" alt="Mitsubishi Shogun odometer" width="100%" class="image">
+                        <a href="img/odo_start.jpg"> <img src="img/odo_start.jpg" alt="Mitsubishi Shogun odometer" width="100%" class="image"></a>
                     </div>
                     <div class="newsItemContentText">
                         Leaving Portsmouth! Odometer at 154010!
@@ -78,7 +96,7 @@
                 </div>
                 <div class="newsItemContentWrapper">
                     <div class="newsItemContentImage">
-                        <img src="img/ferry.png" alt="Ferry Crossing" width="100%">
+                        <a href="img/ferry.png"> <img src="img/ferry.png" alt="Ferry Crossing" width="100%"></a>
                     </div>
                     <div class="newsItemContentText">
                         Ferry booked with Irish Ferries! Dover to Calais!
@@ -92,7 +110,7 @@
                 </div>
                 <div class="newsItemContentWrapper">
                     <div class="newsItemContentImage">
-                        <img src="img/shogun1.jpg" alt="Mitsubishi Shogun" width="100%" class="image">
+                        <a href="img/shogun1.jpg"> <img src="img/shogun1.jpg" alt="Mitsubishi Shogun" width="100%" class="image"></a>
                     </div>
                     <div class="newsItemContentText">
                         Car almost ready to go! 
@@ -106,7 +124,7 @@
                 </div>
                 <div class="newsItemContentWrapper">
                     <div class="newsItemContentImage">
-                        <img src="img/decathlon.jpg" alt="Decathlon" width="100%" class="image">
+                        <a href="img/decathlon.jpg"> <img src="img/decathlon.jpg" alt="Decathlon" width="100%" class="image"></a>
                     </div>
                     <div class="newsItemContentText">
                         Quick visit to Decathlon for some warm socks and some mountains ready boots!
@@ -133,15 +151,13 @@
             </div>
         </div>
 
-        <div class="stream" id="stream">
-            
+        <div class="stream" id="stream">            
             <div class="ItemWrapper"> STREAMING ... </div>
         </div>
 
         <div class="track" id="track">            
             <div class="ItemWrapper"> TRACK DETAILS ... </div>
         </div>
-
             
   </body>
 </html>
