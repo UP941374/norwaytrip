@@ -59,11 +59,16 @@ window.onload = function() {
     fuelStatsMPG.textContent = calcfuelStatsMPG() + ' l/100km';
 
     //map section
-    let map = L.map('map').setView([51.505, -0.09], 13);
+    let map = L.map('map').setView([55, 5], 4);
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
-}).addTo(map);
+    }).addTo(map);
+
+    //camping 1
+    //51.17796037807209, 3.1462270521345164
+    let marker = L.marker([51.177, 3.146]).addTo(map);  
 
 
     //default landing page
