@@ -101,7 +101,11 @@ body{
 
   #map { 
     height: 500px; 
-    }
+  }
+
+  #maptracks { 
+    height: 500px; 
+  }
 
 
   @media only screen and (max-width: 420px) {
