@@ -28,6 +28,7 @@ window.onload = function() {
         liters: 81.46,
         cost: 159.96,
       };
+
     fuelings.push(fueling1);
 
       const fueling2 = {
@@ -107,24 +108,24 @@ window.onload = function() {
         attribution: '© OpenStreetMap'
     }).addTo(maptracks);
 
-    const tracks = [
-        'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day1.gpx',
-        'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day2.gpx'
-    ];
+    let tracks = [];
+
+    const track1={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day1.gpx', col:'green'};
+    tracks.push(track1);
+    const track2={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day2.gpx', col:'blue'};
+    tracks.push(track2);
 
     for (const tr of tracks) {
-        new L.GPX(tr, {async: true,  marker_options: {
+        new L.GPX(tr.url, {async: true,  marker_options: {
             startIconUrl: 'gpx/marker.png',
             endIconUrl: 'gpx/marker.png',
             shadowUrl: 'gpx/marker.png'
           }, polyline_options: {
-            color: randomRGB(),
+            color: tr.col,
             opacity: 1,
             weight: 5,
             lineCap: 'round'
-          }}).on('loaded', function(e) {
-            maptracks.fitBounds(e.target.getBounds());
-          }).addTo(maptracks);        
+          }}).addTo(maptracks);        
     }
 
     //default landing page
