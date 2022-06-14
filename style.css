@@ -67,11 +67,11 @@ body{
 }
 
 .newsItemContentImage {
-    width:10eM;
+    width:15%;
 }
 
 .newsItemContentText {
-    width:75%;
+    width:85%;
     padding:0.5eM;
 }
 
