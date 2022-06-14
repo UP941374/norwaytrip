@@ -38,7 +38,15 @@ window.onload = function() {
         liters: 73.06,
         cost: 146.55,
       };
-    fuelings.push(fueling2);    
+    fuelings.push(fueling2);  
+    
+    function randomRGB() {
+        let r = Math.floor(Math.random() * 255) + 1;
+        let g = Math.floor(Math.random() * 255) + 1;
+        let b = Math.floor(Math.random() * 255) + 1;
+        return "rgb("+r+" ,"+g+","+ b+")"; 
+    }
+    
 
     function calcfuelStatsKms() {
         const start = 153948;
@@ -85,7 +93,6 @@ window.onload = function() {
     //camping 1
     //51.17796037807209, 3.1462270521345164
 
-
     //camping 2
     //52.19073285923369, 4.834967289238963
 
@@ -94,23 +101,31 @@ window.onload = function() {
     //tracks section
 
     let maptracks = L.map('maptracks').setView([55, 5], 4);
-    console.log(maptracks);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap'
     }).addTo(maptracks);
 
-    const tracks = ['gpx/day1.gpx','gpx/day2.gpx'];
+    const tracks = [
+        'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day1.gpx',
+        'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day2.gpx'
+    ];
 
     for (const tr of tracks) {
-        new L.GPX(tr, {async: true}).on('loaded', function(e) {
+        new L.GPX(tr, {async: true,  marker_options: {
+            startIconUrl: 'gpx/marker.png',
+            endIconUrl: 'gpx/marker.png',
+            shadowUrl: 'gpx/marker.png'
+          }, polyline_options: {
+            color: randomRGB(),
+            opacity: 1,
+            weight: 5,
+            lineCap: 'round'
+          }}).on('loaded', function(e) {
             maptracks.fitBounds(e.target.getBounds());
-          }).addTo(maptracks);
-        
+          }).addTo(maptracks);        
     }
-
-
 
     //default landing page
     news.style.display = 'black';
@@ -158,9 +173,6 @@ window.onload = function() {
         fuel.style.display = 'none';
         track.style.display = 'block';
     })
-
-
-
 
 }
 
