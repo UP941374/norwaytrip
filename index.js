@@ -31,23 +31,48 @@ window.onload = function() {
 
     fuelings.push(fueling1);
 
-      const fueling2 = {
+    const fueling2 = {
         date: "14/06/2022",
         stationName: "TOTAL",
         stationLocation: "Den Haag, Netherlands",
         odo: 154313,
         liters: 73.06,
         cost: 146.55,
-      };
-    fuelings.push(fueling2);  
-    
-    function randomRGB() {
-        let r = Math.floor(Math.random() * 255) + 1;
-        let g = Math.floor(Math.random() * 255) + 1;
-        let b = Math.floor(Math.random() * 255) + 1;
-        return "rgb("+r+" ,"+g+","+ b+")"; 
+    };
+
+    fuelings.push(fueling2);   
+
+    const fueling3 = {
+        date: "16/06/2022",
+        stationName: "ARAL",
+        stationLocation: "Tornesch, Germany",
+        odo: 154744,
+        liters: 86.37,
+        cost: 153.91,
+    };
+
+    fuelings.push(fueling3);  
+
+    for (const f of fuelings) {
+        let fuelingwrapper = document.querySelector('#fuelingwrapper');
+        let fueling = document.createElement('div');
+        fueling.classList.add("fuelingItem");
+        let pdate = document.createElement('p');
+        pdate.textContent = f.date + ' ' + f.stationLocation;
+        fueling.appendChild(pdate);
+        let pname = document.createElement('p');
+        pname.textContent = f.stationName;
+        fueling.appendChild(pname);
+        let pliters = document.createElement('p');
+        pliters.textContent = f.liters + ' liters';
+        fueling.appendChild(pliters);
+        let pcost = document.createElement('p');
+        pcost.textContent = '£' + f.cost + ' ('+ (f.cost/f.liters).toFixed(2) +' £/l)';
+        fueling.appendChild(pcost);
+        fuelingwrapper.appendChild(fueling);
     }
-    
+
+
 
     function calcfuelStatsKms() {
         const start = 153948;
@@ -78,7 +103,7 @@ window.onload = function() {
         return totalL/totalKM*100   
     }
 
-    fuelStatsKms.textContent = calcfuelStatsKms() + ' KMs';
+    fuelStatsKms.textContent = calcfuelStatsKms().toFixed(0) + ' KMs';
     fuelStatsLiters.textContent = calcfuelStatsLiters().toFixed(2) + ' l';
     fuelStatsCost.textContent = '£' + calcfuelStatsCost().toFixed(2);
     fuelStatsMPG.textContent = calcfuelStatsMPG().toFixed(1) + ' l/100km';
@@ -91,13 +116,16 @@ window.onload = function() {
     attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    //camping 1
+    //camping 1 - CAMPING MEMLING
     //51.17796037807209, 3.1462270521345164
 
-    //camping 2
+    //camping 2 - GREEN HEART
     //52.19073285923369, 4.834967289238963
 
-    let marker = L.marker([52.1907, 4.8349]).addTo(map);  
+    //camping 3 - SANKT PETER ORDING
+    //54.32951367083406, 8.589464051992495
+
+    let marker = L.marker([54.32951367083406, 8.589464051992495]).addTo(map);  
 
     //tracks section
 
