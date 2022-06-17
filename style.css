@@ -51,7 +51,7 @@ body{
 
 .ItemWrapper {
     margin: 0.5eM auto;
-    width: 75vw;
+    width: 50vw;
     padding:0.25eM;
     border-radius: 10px;
     background-color:rgba(255, 255, 255, 0.500);
@@ -90,7 +90,7 @@ body{
 
 .fuelingItem{
     margin: 0.5eM auto;
-    width: 75vw;
+    width: 50vw;
     padding:0.25eM;
     border-radius: 10px;
     background-color:rgba(255, 255, 255, 0.500);
@@ -102,7 +102,19 @@ body{
     height: 400px;
 }
 
-@media only screen and (max-width: 620px) {
+.gmapsmarker{
+    height:1eM;
+}
+
+  #map { 
+    height: 65vh; 
+  }
+
+  #maptracks { 
+    height: 65vh; 
+  }
+
+  @media only screen and (max-width: 620px) {
     .header {
         font-size: 3eM;
     }
@@ -111,12 +123,13 @@ body{
     }
   }
 
-  #map { 
-    height: 65vh; 
-  }
-
-  #maptracks { 
-    height: 65vh; 
+  @media only screen and (max-width: 1000px) {
+    .ItemWrapper{
+        width:95vw;
+    }
+    .fuelingItem{
+        width:95vw;   
+    }
   }
 
 
