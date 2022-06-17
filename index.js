@@ -114,6 +114,8 @@ window.onload = function() {
     tracks.push(track1);
     const track2={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day2.gpx', col:'blue'};
     tracks.push(track2);
+    const track3={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day4.gpx', col:'red'};
+    tracks.push(track3);
 
     for (const tr of tracks) {
         new L.GPX(tr.url, {async: true,  marker_options: {
