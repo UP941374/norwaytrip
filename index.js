@@ -147,7 +147,7 @@ window.onload = function() {
     tracks.push(track2);
     const track3={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day4.gpx', col:'red'};
     tracks.push(track3);
-    const track4={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day6.gpx', col:'cyan'};
+    const track4={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day6.gpx', col:'magenta'};
     tracks.push(track4);
 
     for (const tr of tracks) {
