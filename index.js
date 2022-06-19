@@ -125,7 +125,10 @@ window.onload = function() {
     //camping 3 - SANKT PETER ORDING
     //54.32951367083406, 8.589464051992495
 
-    let marker = L.marker([54.32951367083406, 8.589464051992495]).addTo(map);  
+    //camping 4 - denmark forest
+    //56.29081700926285, 8.134772757947575
+
+    let marker = L.marker([56.29081700926285, 8.134772757947575]).addTo(map);  
 
     //tracks section
 
@@ -144,6 +147,8 @@ window.onload = function() {
     tracks.push(track2);
     const track3={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day4.gpx', col:'red'};
     tracks.push(track3);
+    const track4={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day6.gpx', col:'cyan'};
+    tracks.push(track4);
 
     for (const tr of tracks) {
         new L.GPX(tr.url, {async: true,  marker_options: {
