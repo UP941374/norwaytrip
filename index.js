@@ -53,6 +53,17 @@ window.onload = function() {
 
     fuelings.push(fueling3);  
 
+    const fueling4 = {
+        date: "20/06/2022",
+        stationName: "OK",
+        stationLocation: "Skagen, Denmark",
+        odo: 155210,
+        liters: 19.09+59.50,
+        cost: 152.24,
+    };
+
+    fuelings.push(fueling4);  
+
     for (const f of fuelings) {
         let fuelingwrapper = document.querySelector('#fuelingwrapper');
         let fueling = document.createElement('div');
@@ -128,7 +139,10 @@ window.onload = function() {
     //camping 4 - denmark forest
     //56.29081700926285, 8.134772757947575
 
-    let marker = L.marker([56.29081700926285, 8.134772757947575]).addTo(map);  
+    //camping 5 - norway fjord camping
+    //58.06354750387391, 7.065807873872447
+
+    let marker = L.marker([58.06354750387391, 7.065807873872447]).addTo(map);  
 
     //tracks section
 
@@ -139,16 +153,14 @@ window.onload = function() {
         attribution: '© OpenStreetMap'
     }).addTo(maptracks);
 
-    let tracks = [];
-
-    const track1={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day1.gpx', col:'green'};
-    tracks.push(track1);
-    const track2={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day2.gpx', col:'blue'};
-    tracks.push(track2);
-    const track3={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day4.gpx', col:'red'};
-    tracks.push(track3);
-    const track4={url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day6.gpx', col:'magenta'};
-    tracks.push(track4);
+    let tracks = [
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day1.gpx', col:'green'},
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day2.gpx', col:'blue'}, 
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day4.gpx', col:'red'},
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day6.gpx', col:'magenta'},
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day7.gpx', col:'orange'},
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day8.gpx', col:'brown'}
+    ];
 
     for (const tr of tracks) {
         new L.GPX(tr.url, {async: true,  marker_options: {
