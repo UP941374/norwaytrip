@@ -23,10 +23,9 @@ body{
 }
 
 .flags {
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-    margin: 0.25eM;
+    width: 50vw;
+    margin: 0.25eM auto;
+    text-align: center;
 }
 
 .menu {
@@ -59,7 +58,7 @@ body{
 .ItemWrapper {
     margin: 0.5eM auto;
     width: 50vw;
-    padding:0.25eM;
+    padding: 0.25eM;
     border-radius: 10px;
     background-color:rgba(255, 255, 255, 0.500);
 }
@@ -132,6 +131,9 @@ body{
         width:95vw;    
     }
     .fuelStats{
+        width:95vw; 
+    }
+    .flags{
         width:95vw; 
     }
   }
