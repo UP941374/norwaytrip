@@ -142,7 +142,10 @@ window.onload = function() {
     //camping 5 - norway fjord camping
     //58.06354750387391, 7.065807873872447
 
-    let marker = L.marker([58.06354750387391, 7.065807873872447]).addTo(map);  
+    //camping 6 - tau 
+    //59.05532089672244, 5.922616991193654
+
+    let marker = L.marker([59.05532089672244, 5.922616991193654]).addTo(map);  
 
     //tracks section
 
