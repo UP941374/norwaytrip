@@ -108,7 +108,7 @@ window.onload = function() {
         pname.textContent = f.stationName;
         fueling.appendChild(pname);
         let pliters = document.createElement('p');
-        pliters.textContent = f.liters + ' liters';
+        pliters.textContent = f.liters.toFixed(2) + ' liters';
         fueling.appendChild(pliters);
         let pcost = document.createElement('p');
         pcost.textContent = '£' + f.cost + ' ('+ (f.cost/f.liters).toFixed(2) +' £/l)';
