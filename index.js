@@ -64,6 +64,39 @@ window.onload = function() {
 
     fuelings.push(fueling4);  
 
+    const fueling5 = {
+        date: "23/06/2022",
+        stationName: "SHELL",
+        stationLocation: "Roldal, Norway",
+        odo: 155616,
+        liters: 33.97+44.51,
+        cost: 159.07,
+    };
+
+    fuelings.push(fueling5);  
+
+    const fueling6 = {
+        date: "24/06/2022",
+        stationName: "OKQ8",
+        stationLocation: "Tvaaker, Sweden",
+        odo: 156042,
+        liters: 17.73+55.58,
+        cost: 158.11,
+    };
+
+    fuelings.push(fueling6); 
+
+    const fueling7 = {
+        date: "25/06/2022",
+        stationName: "ARAL",
+        stationLocation: "Sottrum, Germany",
+        odo: 156453,
+        liters: 85.37,
+        cost: 171.95,
+    };
+
+    fuelings.push(fueling7); 
+
     for (const f of fuelings) {
         let fuelingwrapper = document.querySelector('#fuelingwrapper');
         let fueling = document.createElement('div');
