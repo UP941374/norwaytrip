@@ -196,6 +196,9 @@ window.onload = function() {
         {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day6.gpx', col:'magenta'},
         {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day7.gpx', col:'orange'},
         {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day8.gpx', col:'brown'}
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day9.gpx', col:'yellow'}
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day11.gpx', col:'pink'}
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day12.gpx', col:'lime'}
     ];
 
     for (const tr of tracks) {
