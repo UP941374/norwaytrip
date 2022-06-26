@@ -95,7 +95,18 @@ window.onload = function() {
         cost: 171.95,
     };
 
-    fuelings.push(fueling7); 
+    fuelings.push(fueling7);
+
+    const fueling8 = {
+        date: "25/06/2022",
+        stationName: "ESSO",
+        stationLocation: "Maidstone, UK",
+        odo: 157010,
+        liters: 24.38,
+        cost: 50.24,
+    };
+
+    fuelings.push(fueling8); 
 
     for (const f of fuelings) {
         let fuelingwrapper = document.querySelector('#fuelingwrapper');
@@ -120,7 +131,7 @@ window.onload = function() {
 
     function calcfuelStatsKms() {
         const start = 153948;
-        const end = fuelings[fuelings.length-1].odo;
+        const end = fuelings[fuelings.length - 1].odo;
         const diff = (end - start) * 1.6;
         totalKM = diff;
         return diff
@@ -144,7 +155,7 @@ window.onload = function() {
     };
 
     function calcfuelStatsMPG(){
-        return totalL/totalKM*100   
+        return (totalL/totalKM*100)   
     }
 
     fuelStatsKms.textContent = calcfuelStatsKms().toFixed(0) + ' KMs';
@@ -199,7 +210,7 @@ window.onload = function() {
         {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day9.gpx', col:'yellow'},
         {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day11.gpx', col:'pink'},
         {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day12.gpx', col:'lime'},
-        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day13.gpx', col:'silver'},
+        {url:'https://raw.githubusercontent.com/UP941374/norwaytrip/main/gpx/day13.gpx', col:'hotpink'},
     ];
 
     for (const tr of tracks) {
