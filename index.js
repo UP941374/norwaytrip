@@ -165,7 +165,7 @@ window.onload = function() {
 
     //live location section
     let map = L.map('map').setView([55, 5], 4);   
-
+    
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
@@ -189,7 +189,7 @@ window.onload = function() {
     //camping 6 - tau 
     //59.05532089672244, 5.922616991193654
 
-    let marker = L.marker([59.05532089672244, 5.922616991193654]).addTo(map);  
+    let marker = L.marker([51.20618770843452, -1.4568982767950496]).addTo(map);  
 
     //tracks section
 
